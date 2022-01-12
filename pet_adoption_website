@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Adoption</title>
+    <style>
+      body {
+        background-color: #fecea8;
+      }
+      h1,
+      h2,
+      h3,
+      h5 {
+        text-align: center;
+      }
+
+      h1 {
+        background: #45171d;
+        color: white;
+        padding: 20px 20px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 100px;
+        font-weight: lighter;
+        margin: 0 auto;
+        border-radius: 4px;
+        max-width: 1200px;
+      }
+
+      h3 {
+        font-size: 45px;
+        font-weight: 400;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding: 0 40px;
+      }
+
+      h2 {
+        font-size: 35px;
+        font-weight: 400;
+        color: white;
+        border: 1px solid #45171d;
+        background: #45171d;
+        padding: 10px 20px;
+        margin: 0 200px;
+        border-radius: 4px;
+        opacity: 60%;
+      }
+      p {
+        text-align: center;
+      }
+
+      h5 {
+        font-size: 30px;
+        font-weight: 400;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: white;
+        margin-block-start: 10px;
+        margin-block-end: 10px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #45171d;
+        color: white;
+        border: 1px solid #45171d;
+        font-size: 16px;
+        text-align: center;
+        line-height: 22px;
+        padding: 16px 30px;
+        border-radius: 30px;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+      }
+
+      .author {
+        font-family: monospace;
+        font-size: 17px;
+        color: #4d4d4d;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .question {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 28px;
+        font-weight: normal;
+      }
+
+      .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        grid-column-gap: 20px;
+      }
+
+      .images img {
+        width: 95%;
+        border-radius: 5px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .dog,
+      .cat,
+      .rabbit {
+        border: 1.5px solid #45171d;
+        background: #45171d;
+        border-radius: 30px;
+        padding: 0 0 10px;
+        margin: 0 10px;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+      }
+
+      .more-info {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+      .link {
+        color: #45171d;
+      }
+
+      .personality-buttons {
+        display: block;
+        margin: 20px 20px;
+        background: #8f6055;
+        color: white;
+        border: 1px solid #8f6055;
+        font-size: 20px;
+        text-align: center;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+      }
+
+      .personality-buttons:hover,
+      button:hover {
+        border: 1px solid #45171d;
+        background: white;
+        color: #45171d;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ADOPT A PET TODAY</h1>
+    <h3>
+      In the UK alone, RSPCA receives an animal abuse case
+      <strong>every 30 seconds.</strong>
+    </h3>
+    <h2>Join the 'Rehome a Furry Friend' Initiative</h2>
+    <p class="question">
+      Could you offer a 'forever-home' to any of these animals who desperately
+      needs it?
+    </p>
+    <div class="images">
+      <div class="dog">
+        <h5>CHASE</h5>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/017/060/original/chase.jpeg?1631460068"
+          width="200"
+        />
+        <div class="personality-buttons">Show personality</div>
+      </div>
+      <div class="cat">
+        <h5>PEDRO</h5>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/017/061/original/pedro.jpeg?1631460089"
+          width="200"
+        />
+        <div class="personality-buttons">Show personality</div>
+      </div>
+      <div class="rabbit">
+        <h5>BILLY AND LAILEY</h5>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/017/059/original/billylailey.jpeg?1631460048"
+          width="200"
+        />
+        <div class="personality-buttons">Show personality</div>
+      </div>
+    </div>
+
+    <h3>Together we can <strong>#CancelOutCruelty</strong></h3>
+
+    <button>Get Started</button>
+    <p class="more-info">
+      Find out more
+      <a href="https://www.rspca.org.uk/findapet" target="_blank" class="link">
+        here.</a
+      ><br />
+    </p>
+    <p class="author">Coded by Tarane Subramaniam</p>
+    <script>
+      function getStarted() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your e-mail?");
+
+        if (name.length > 0 && email.length > 0) {
+          alert(
+            `Thank you ${name} for your interest! We'll be in touch! 🐶🐱🐰`
+          );
+        } else {
+          alert(`Invalid name or e-mail! Please try again. 👻`);
+          getStarted();
+        }
+      }
+
+      function dogPersonality() {
+        alert(
+          `🐶CHASE'S PERSONALITY🐶 \n ⚾ loves to learn agility or fly ball \n 🏠 needs teaching that it's ok to be alone \n 🙀 prefers not to live with a cat \n 👩🏻‍🤝‍🧑🏽 prefers an adult-only household`
+        );
+      }
+
+      function catPersonality() {
+        alert(
+          `🐱PEDRO'S PERSONALITY🐱 \n 😺 prefers to be the only cat in a home \n 🏠 needs to go outside and explore \n 🐕 prefers not to live with a dog \n 👩🏻‍🤝‍🧑🏽 prefers an adult-only household`
+        );
+      }
+
+      function rabbitPersonality() {
+        alert(
+          `🐰BILLY AND LAILEY'S PERSONALITY🐰 \n 🐾 please adopt the both of us together \n 👨‍👩‍👧‍👦 can live with children of secondary school age \n  🏠 need to go outside and explore \n 🥕 like treat time and being hand-fed`
+        );
+      }
+
+      let getStartedButton = document.querySelector("button");
+      getStartedButton.addEventListener("click", getStarted);
+
+      let personalityButton = document.querySelectorAll(".personality-buttons");
+      personalityButton[0].addEventListener("click", dogPersonality);
+      personalityButton[1].addEventListener("click", catPersonality);
+      personalityButton[2].addEventListener("click", rabbitPersonality);
+    </script>
+  </body>
+</html>
